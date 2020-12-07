@@ -153,6 +153,10 @@ type variableProperties struct {
 			Init_rc  []string
 		}
 
+		En_VideoOnlySeek struct {
+			Cflags   []string
+			Cppflags []string
+		}
 	} `android:"arch_variant"`
 }
 
@@ -277,6 +281,7 @@ type productVariables struct {
 	GuiQuickboot *bool `json:",omitempty"`
 	OpenglQuickboot *bool `json:",omitempty"`
 	SurfaceFlingerQuickboot *bool `json:",omitempty"`
+	En_VideoOnlySeek *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
